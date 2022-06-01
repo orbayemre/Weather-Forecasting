@@ -472,3 +472,14 @@ footer .openAPiLogo img{
     width: 70px;
     height: 30px;
 }
+
+footer .github{
+    position: relative;
+    left: 570px;
+}
+footer .github img{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    fill: var(--10);
+}
