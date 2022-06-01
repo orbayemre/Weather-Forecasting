@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Baloo+Da+2:wght@500&family=Dosis:wght@400;600&family=Patrick+Hand&family=Signika:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Baloo 2', cursive;
+}
+:root {
+    --60: #143F6B;
+    --30: #F55353;
+    --10: #fff;
+}
+.none{
+    display: none;
+}
+.loading {
+    border: 16px solid var(--30);
+    border-top: 16px solid var(--10); 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#container{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgb(20,63,107);
+    background: linear-gradient(32deg, rgba(20,63,107,1) 53%, rgba(0,0,255,0) 100%);
+    z-index: 10;
+}
+body{
+    background: var(--30);
+    background-size: cover;
+    z-index: 5;
+}
+header{
+    height:7%;
+    padding: 20px;
+    position: relative;
+}
+header .head{
+    display: inline-block;
+    color: white;
+    font-size: 28px;
+    position: absolute;
+    left: 40px;
+    cursor: pointer;
+}
+header .searchComp{
+    position: absolute;
+    height: 40px;
+    width: 250px;
+    right: 80px;
+    background: var(--30);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    
+}
+header .searchComp form{
+    display: inline-block;
+    width:207px;
+    height: 100%;
+    position: relative;
+}
+header .searchComp .autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+header .searchComp .autocomplete-items {
+    position: absolute;
+    border: 1px solid var(--60);
+    background-color: var(--30);
+    color: var(--60);
+    border-bottom: none;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 99;
+    width: 100%;
+    top: 100%;
+    left: 0%;
+    right: 0;
+}
+header .searchComp .autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--30);
+    border-bottom: 1px solid var(--60);
+}
+header .searchComp .autocomplete-items div:last-child{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+header .searchComp .autocomplete-items div:hover {
+    background-color: #fc6666;
+}
+header .searchComp .autocomplete-active {
+    background-color: #fc6666 !important;
+}
+header .searchComp input{
+    margin-left: 20px;
+    margin-top: 10px;
+    width:100%;
+    height: 100%;
+    background-color: var(--30);
+    border: none;
+    color: var(--60);
+    font-size: 14px;
+    display: inline-block;
+
+}
+header .searchComp input:focus{
+    outline: none;
+}
+header .searchComp input::placeholder{
+    color: var(--60);
+}
+header .searchComp .searchBtn{
+    display: inline-block;
+    height: 40px;
+    width:18%;
+    background-color: var(--60);
+    position: absolute;
+    right: 0px;
+    border-radius: 0px 50px 50px 0px ;
+    border: 1px solid var(--30);
+}
+header .searchComp .searchBtn:active{
+
+    background-color: var(--10);
+}
+header .searchComp .searchBtn svg{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 7px;
+    margin-top: 7px;
+    fill: var(--30);
+}
+.weather{
+    display: inline-block;
+    width: 700px;
+    height: 60%;
+    position: relative;
+    top: 5%;
+    left: 8%;
+
+}
+.weather .basic{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    color: var(--10);
+}
+.weather .rows {
+    height: 30%;
+}
+.weather  .basic svg{
+    width: 50px;
+    height: 50px;
+    fill: var(--10);
+}
+.weather .details svg{
+    width: 30px;
+    height: 30px;
+    fill: var(--30);
+}
+.weather .basic .rows:nth-child(1){
+    margin-bottom: 20px;
+}
+.weather .basic .rows:nth-child(1) .cityName{
+    font-size: 36px;
+}
+.weather .basic .rows:nth-child(1) .time{
+    position: relative;
+    bottom: 15px;
+    color: var(--30);
+    font-weight: bold;
+}
+.weather .basic .rows:nth-child(1) .time .day{
+    position: fixed;
+    left: 13%;
+}
+.weather .basic .rows:nth-child(1) .ripple {
+    width: 0.8rem; 
+    background: var(--30); 
+    position: absolute;
+    top: 30px;
+    left: -38px;
+
+}
+.weather .basic .rows:nth-child(1) .ripple,.ripple::before,.ripple::after {
+    content: "";
+    display: grid;
+    grid-area: 1/1;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 #f55353d6;
+    animation: r 3s linear infinite var(--s,0s);
+}
+.weather .basic .rows:nth-child(1) .ripple::before {--s: 2s}
+.weather .basic .rows:nth-child(1) .ripple::after  {--s: 5s}
+
+@keyframes r {to {box-shadow: 0 0 0 1.5rem #0000}}
+
+.weather .basic .rows:nth-child(2){
+    display: flex;
+    width: 60%;
+    justify-content: left;
+    align-items: center;
+    font-size: 32px;
+}
+.weather .basic .rows:nth-child(2) .deg{
+    display: inline-block;
+    padding-right: 50px;
+}
+.weather .basic .rows:nth-child(2) .description{
+    padding-bottom: 15px;
+    display: inline-block;
+}
+.weather .basic .rows:nth-child(2) .description svg{
+    position: absolute;
+    padding-left: 15px;
+    fill: inherit !important;
+}
+.weather .basic .rows:nth-child(3){
+    font-size: 28px;
+}
+.weather .details{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 50%;
+    width: 70%;
+
+}
+.weather .details .cell1 { grid-area: 1 / 1 / 2 / 2; }
+.weather .details .cell2 { grid-area: 1 / 2 / 2 / 3; }
+.weather .details .cell3 { grid-area: 2 / 1 / 3 / 2; }
+.weather .details .cell4 { grid-area: 2 / 2 / 3 / 3; }
+.weather .details .cell1{
+    font-size: 18px;
+    color: var(--10);
+    padding-top: 10px;
+    position: relative;
+}
+.weather .details .cell1 .col1{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.weather .details .cell1 .col1 .uv{
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+}
+.weather .details .cell1 .col2{
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 50%;
+    height: 100%;
+}
+.weather .details .cell2 .head{
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    color:var(--10);
+}
+.weather .details .cell2 .head div{
+    display: inline-block;
+}
+.weather .details .cell2 .head .icon{
+    margin-left: 40px;
+    position: relative;
+    top: 15px;
+}
+.weather .details .cell2 .body{
+    display: inline-block;
+    width: 100%;
+    height: 50%;
+    color: var(--10);
+}
+.weather .details .cell2 .body div{
+    display: inline-block;
+    position: relative;
+    bottom: 20px;
+}
+.weather .details .cell2 .body .speed{
+    margin-left:15px;
+}
+.weather .details .cell3{
+    font-size: 18px;
+    color: var(--10);
+    padding-top: 10px;
+    position: relative;
+}
+.weather .details .cell3 .col1{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+.weather .details .cell3 .col1 .uv{
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+}
+.weather .details .cell3 .col2{
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 30%;
+    height: 100%;
+}
+.weather .details .cell4{
+    font-size: 18px;
+    color: var(--10);
+    padding-top: 10px;
+    position: relative;
+}
+.weather .details .cell4 .col1{
+    display: inline-block;
+    width: 70%;
+    height: 100%;
+}
+.weather .details .cell4 .col1 .uv{
+    display: inline-block;
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+}
+.weather .details .cell4 .col2{
+    position: absolute;
+    display: inline-block;
+    right: 0px;
+    width: 30%;
+    height: 100%;
+}
+.days{
+    display: inline-block;
+    width: 1200px;
+    height: 20%;
+    position: relative;
+    top: 5%;
+    left: 4%;
+    color: var(--10);
+}
+.dett{
+    top: 5% !important;
+    left:8% !important;
+}
+.days .carousel{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.days .carousel .day-item{
+    display: inline-block;
+    width: 13%;
+    background-color: var(--30);
+    border-radius: 8px;
+    padding: 3px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.days .carousel .day-item .head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.days .carousel .day-item .head .day{
+    color: var(--60);
+    font-size: 16px;
+}
+.days .carousel .day-item .head .weat{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--10);
+    font-size: 12px;
+}
+.days .carousel .day-item .head .weat .deg{
+    display: inline-block;
+}
+.days .ic{
+    display: inline-block;
+}
+.days .ic svg{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+.days .carousel .day-item .body{
+    display: none;
+    margin-left: 5px;
+    color: var(--10);
+    font-size: 14px;
+}
+.recommended{
+    display: none;
+    width: 1000px;
+    position: relative;
+    top: 200px;
+    left: 100px;
+}
+.recommended .recomm-item{
+    display: inline-block;
+    width: 25%;
+    height: 40px;
+    padding: 8px 60px;
+    margin: 10px 20px;
+    color: var(--60);
+    font-size: 18px;
+    background-color: var(--30);
+    border-radius: 10px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transition: 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.recommended .recomm-item:hover{
+    box-shadow: 5px 15px 20px rgba(0, 0, 0, 0.25);
+    background-color: #f96060;
+}
+footer{
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 42%;
+    z-index: 1000;
+}
+footer div{
+    font-size: 14px;
+    display: inline-block;
+    padding: 0px 5px;
+    font-weight: 100;
+    color: var(--30);
+}
+footer .dev{
+    position: relative;
+    bottom: 3px;
+    font-weight: 100;
+}
+footer .dev span{
+    color: var(--10);
+    padding-left: 5px;
+}
+footer .openAPiLogo img{
+    width: 70px;
+    height: 30px;
+}
