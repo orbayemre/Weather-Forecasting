@@ -147,11 +147,19 @@ createParElement = (response)=>{
         speed.innerHTML = response.days[0].wind_speed;
         cloud.innerHTML = response.days[0].clouds;
         rain.innerHTML = response.days[0].pop*100;
-
         descDesg(response.days[0].description);
 
         sunset.innerHTML = window.moment(response.days[0].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[0].sunrise * 1000).tz(response.timeZone).format("HH:mm");
+
+        
+        document.querySelector(".days .zero").style.border="1px solid var(--10)";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="none";
 
     });
     document.querySelector(".days .one").addEventListener("click",()=>{
@@ -170,6 +178,14 @@ createParElement = (response)=>{
         sunset.innerHTML = window.moment(response.days[1].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[1].sunrise * 1000).tz(response.timeZone).format("HH:mm");
 
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="1px solid var(--10)";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="none";
+
     });
     document.querySelector(".days .two").addEventListener("click",()=>{
         temp.innerHTML = Math.round(response.days[2].temp);
@@ -186,6 +202,14 @@ createParElement = (response)=>{
 
         sunset.innerHTML = window.moment(response.days[2].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[2].sunrise * 1000).tz(response.timeZone).format("HH:mm");
+
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="1px solid var(--10)";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="none";
 
     });
     document.querySelector(".days .three").addEventListener("click",()=>{
@@ -204,6 +228,14 @@ createParElement = (response)=>{
         sunset.innerHTML = window.moment(response.days[3].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[3].sunrise * 1000).tz(response.timeZone).format("HH:mm");
 
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="1px solid var(--10)";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="none";
+
     });
     document.querySelector(".days .four").addEventListener("click",()=>{
         temp.innerHTML = Math.round(response.days[4].temp);
@@ -220,6 +252,14 @@ createParElement = (response)=>{
 
         sunset.innerHTML = window.moment(response.days[4].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[4].sunrise * 1000).tz(response.timeZone).format("HH:mm");
+
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="1px solid var(--10)";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="none";
 
     });
     document.querySelector(".days .five").addEventListener("click",()=>{
@@ -238,6 +278,14 @@ createParElement = (response)=>{
         sunset.innerHTML = window.moment(response.days[5].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[5].sunrise * 1000).tz(response.timeZone).format("HH:mm");
 
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="1px solid var(--10)";
+        document.querySelector(".days .six").style.border="none";
+
     });
     document.querySelector(".days .six").addEventListener("click",()=>{
         temp.innerHTML = Math.round(response.days[6].temp);
@@ -254,6 +302,14 @@ createParElement = (response)=>{
 
         sunset.innerHTML = window.moment(response.days[6].sunset * 1000).tz(response.timeZone).format("HH:mm");
         sunrise.innerHTML = window.moment(response.days[6].sunrise * 1000).tz(response.timeZone).format("HH:mm");
+
+        document.querySelector(".days .zero").style.border="none";
+        document.querySelector(".days .one").style.border="none";
+        document.querySelector(".days .two").style.border="none";
+        document.querySelector(".days .three").style.border="none";
+        document.querySelector(".days .four").style.border="none";
+        document.querySelector(".days .five").style.border="none";
+        document.querySelector(".days .six").style.border="1px solid var(--10)";
 
     });
 

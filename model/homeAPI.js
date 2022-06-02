@@ -1,5 +1,5 @@
 const url="https://api.openweathermap.org/data/2.5/";
-const key="8cdbcca2e5aa060267b345d7aa72f22d";
+const key="YOURKEY";
 
 headerWeat = (lat,lon) =>{
     var query =url+"onecall?lat="+lat+"&lon="+lon+"&exclude=minutely&units=metric&lang=tr&appid="+key;   

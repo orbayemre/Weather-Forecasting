@@ -384,6 +384,9 @@ header .searchComp .searchBtn svg{
     margin-right: 5px;
     cursor: pointer;
 }
+.days .carousel .zero{
+    border: 1px solid var(--10);
+}
 .days .carousel .day-item .head{
     display: flex;
     justify-content: space-around;
@@ -472,7 +475,6 @@ footer .openAPiLogo img{
     width: 70px;
     height: 30px;
 }
-
 footer .github{
     position: relative;
     left: 570px;
