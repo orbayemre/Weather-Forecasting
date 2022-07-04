@@ -5,7 +5,7 @@ Bu proje **MVVM** mimarisini kullanılarak **html**,**css** ve **javascript** il
 
 Projede kullanılan API’lerin her biri API key ile kullanılmaktadır. Bu yüzden kodun entegrasyonunda geliştirici bu key’lerin bulunduğu kısımlara kendi kişisel key’lerini yazmalıdır. Bu key’ler [Openweathermap](https://openweathermap.org/) ile [Google API’s](https://console.cloud.google.com/) sitelerine kayıt olunarak alınabilmektedir
 #
-### view/script.js  
+### [view/script.js](https://github.com/orbayemre/Weather-Forecasting/blob/main/view/script.js)
 Sayfanın dinamikliğini sağlar.  
 * **autocomplete(inp,arr)**   
   Arama yaparken otomatik tamamlama kısmını oluştur ve kontrol eder. Parametre olarak bir html input etiketi ve otomatik tamamlanacak verileri içerien bir dizi ister.
@@ -18,16 +18,16 @@ Sayfanın dinamikliğini sağlar.
 * **homeHref()**  
   Anasayfaya yönlendirmeyi sağlar.  
 #
-### model/homeAPI.js
+### [model/homeAPI.js](https://github.com/orbayemre/Weather-Forecasting/blob/main/model/homeAPI.js)
 home.html dosyasına eklenecek verileri API den çeker.
 * **headerWeat(lat,lon)**  
   Aldığı eylem ve boylam parametrelerini kulanarak API’ye fetch ile istek atar.  
-### model/searchAPI.js  
+### [model/searchAPI.js ](https://github.com/orbayemre/Weather-Forecasting/blob/main/model/searchAPI.js)
 search.html dosyasına eklenecek verileri API den çeker.  
 * **searchWeather(city)**  
   Aldığı şehir parametresini kullanarak API’ye fetch ile istek atar.  
 #
-### viewModel/createElement.js
+### [viewModel/createElement.js](https://github.com/orbayemre/Weather-Forecasting/blob/main/viewModel/createElement.js)
 API’lerden gelen sonuçları göre elementler oluşturup sayfanın belirli yerlerine veri ekler.  
 * **createLocElement(response)**  
   headerWeat fonksiyonundan parametre olarak aldığı sonuçları gerekli düzenleme ve dönüştürme işlemlerini yaptıkdan sonra sayfaya ekler.  
@@ -44,6 +44,6 @@ API’lerden gelen sonuçları göre elementler oluşturup sayfanın belirli yer
 * **getResponse()**  
   URL’deki city parametresinin verisine göre hangi fonksiyonların çağırılacağını belirler.  
 #
-### viewModel/getLocation.js 
+### [viewModel/getLocation.js](https://github.com/orbayemre/Weather-Forecasting/blob/main/viewModel/getLocation.js)
 * **getLocation()**  
   Kullanıcının konum ve zaman bilgisini alan fonksiyondur  
