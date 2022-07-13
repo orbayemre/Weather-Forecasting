@@ -1,9 +1,9 @@
 # Weather Forecasting
 Bu proje hem konum bilgisini kullanarak hem de arama ile istenilen şehrin hava durumunu öğrenebilmemizi sağlar. Konum bilgisine göre hava durumunu gösterebilmesi için kullanıcının konum bilgisine erişme isteğine izin vermesi gerekmektedir.
 
-Bu proje **MVVM** mimarisini kullanılarak **html**,**css** ve **javascript** ile oluşturulmuştur. Css kısmındasayfanın geçişli yüklenebilmesi için **animate.css** kütüphanesi kullanılmıştır. Javascript tarafında ise **jQuery**, svg iconlarının hareketli yüklenmesi için **jquery drawsvg** ve şehirlerin zamanlarını kullanıcıya gösterebilmek için **moment.js** kütüphaneleri kullanılmıştır.Bunların yanında tüm hava durumu bilgilerini çekildiği **Openweathermap API** kullanılmıştır. Lokasyon bilgisinin kullanılmasında ise **Google Maps API** kullanılmıştır.
+Bu proje **MVVM** mimarisini kullanılarak **html**,**css** ve **javascript** ile oluşturulmuştur. Css kısmındasayfanın geçişli yüklenebilmesi için **animate.css** kütüphanesi kullanılmıştır. Javascript tarafında ise **jQuery**, svg iconlarının hareketli yüklenmesi için **jquery drawsvg** ve şehirlerin zamanlarını kullanıcıya gösterebilmek için **moment.js** kütüphaneleri kullanılmıştır.Bunların yanında tüm hava durumu bilgilerini çekildiği **Openweathermap API** kullanılmıştır. Lokasyon bilgisinin kullanılmasında ise **OpenCage Geocoding API** kullanılmıştır.
 
-Projede kullanılan API’lerin her biri API key ile kullanılmaktadır. Bu yüzden kodun entegrasyonunda geliştirici bu key’lerin bulunduğu kısımlara kendi kişisel key’lerini yazmalıdır. Bu key’ler [Openweathermap](https://openweathermap.org/) ile [Google API’s](https://console.cloud.google.com/) sitelerine kayıt olunarak alınabilmektedir
+Projede kullanılan API’lerin her biri API key ile kullanılmaktadır. Bu yüzden kodun entegrasyonunda geliştirici bu key’lerin bulunduğu kısımlara kendi kişisel key’lerini yazmalıdır. Bu key’ler [Openweathermap](https://openweathermap.org/) ile [OpenCage](https://opencagedata.com/) sitelerine kayıt olunarak alınabilmektedir
 #
 ### [view/script.js](https://github.com/orbayemre/Weather-Forecasting/blob/main/view/script.js)
 Sayfanın dinamikliğini sağlar.  
