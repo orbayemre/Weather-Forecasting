@@ -1,5 +1,5 @@
 const url="https://api.openweathermap.org/data/2.5/";
-const key="YOURKEY";
+const key="8cdbcca2e5aa060267b345d7aa72f22d";
 
 headerWeat = (lat,lon) =>{
     var query =url+"onecall?lat="+lat+"&lon="+lon+"&exclude=minutely&units=metric&lang=tr&appid="+key;   
@@ -13,16 +13,15 @@ headerWeat = (lat,lon) =>{
 
 
     ress = (result) =>{
-        geocoder = new google.maps.Geocoder();
-        var latlng = new google.maps.LatLng(lat, lon);
-        geocoder.geocode({ 'latLng': latlng }, function (results, status) {
-            if (status === google.maps.GeocoderStatus.OK) {
-                var len = results.length-2;
-                if (results[len]) {takeCity(results[len].formatted_address);}
-            }
-            else {alert("Geocoder failed due to: " + status);}
-        });
-     
+        var api_url = 'https://api.opencagedata.com/geocode/v1/json';
+        var api_key = '5d82de3945b1493d95b891bb83b7a4fa';
+        var latitude = lat;
+        var longitude = lon;
+
+        var request_url = api_url+ '?'+ 'key=' + api_key+ '&q=' + encodeURIComponent(latitude + ',' + longitude)+ '&pretty=1'+ '&no_annotations=1';
+
+        fetch(request_url).then(response => response.json()).then(data => takeCity(data.results[0].components.state));
+
         var weatherValues = {
             temp:result.current.temp,//SICAKLIK
             feels_like:result.current.feels_like,//HİSSEDİLEN
