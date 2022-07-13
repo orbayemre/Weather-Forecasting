@@ -139,5 +139,5 @@ getCityParam = () =>{
 }
 
 homeHref = () =>{
-    location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/home.html";
+    location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/index.html";
 }

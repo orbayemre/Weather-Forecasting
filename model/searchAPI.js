@@ -5,7 +5,7 @@ searchWeather = (city) =>{
     .then(result => {ress(result);})
     .catch(error => {
         alert(error);
-        window.location="file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/home.html";
+        window.location="file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/index.html";
     })
 
     
