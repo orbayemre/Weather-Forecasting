@@ -8,7 +8,7 @@ headerWeat = (lat,lon) =>{
     .then(result => {ress(result);})
     .catch(error => {
         alert(error);
-        window.location="file:///E:/Dosyalarim/Web%20Projelerim/Weather%20Forecasting%20Web%20Site/view/home.html";
+        window.location="file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/home.html";
     })
 
 

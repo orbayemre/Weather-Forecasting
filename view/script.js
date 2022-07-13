@@ -119,13 +119,13 @@ sendCityParam = () =>{
     const srchInp = document.querySelector(".searchComp input");
     
     srchBtn.addEventListener("click",()=>{
-        location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather%20Forecasting%20Web%20Site/view/search.html?city="+srchInp.value;
+        location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/search.html?city="+srchInp.value;
     });
     
     srchInp.addEventListener("keydown", function(e) {
     
         if(e.keyCode == 13){
-            location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather%20Forecasting%20Web%20Site/view/search.html?city="+srchInp.value;
+            location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/search.html?city="+srchInp.value;
         }
     });
 }
@@ -139,5 +139,5 @@ getCityParam = () =>{
 }
 
 homeHref = () =>{
-    location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather%20Forecasting%20Web%20Site/view/home.html";
+    location.href = "file:///E:/Dosyalarim/Web%20Projelerim/Weather-Forecasting/view/home.html";
 }
