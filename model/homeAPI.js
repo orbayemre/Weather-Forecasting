@@ -8,7 +8,7 @@ headerWeat = (lat,lon) =>{
     .then(result => {ress(result);})
     .catch(error => {
         alert(error);
-        window.location="https://weather-forecastingapp.netlify.app/view/index.html";
+        window.location=".../view/index.html";
     })
 
 
