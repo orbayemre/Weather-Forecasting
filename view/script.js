@@ -119,13 +119,13 @@ sendCityParam = () =>{
     const srchInp = document.querySelector(".searchComp input");
     
     srchBtn.addEventListener("click",()=>{
-        location.href = "https://weather-forecastingapp.netlify.app/view/search.html?city="+srchInp.value;
+        location.href = ".../search.html?city="+srchInp.value;
     });
     
     srchInp.addEventListener("keydown", function(e) {
     
         if(e.keyCode == 13){
-            location.href = "https://weather-forecastingapp.netlify.app/view/search.html?city="+srchInp.value;
+            location.href = ".../search.html?city="+srchInp.value;
         }
     });
 }
@@ -139,5 +139,5 @@ getCityParam = () =>{
 }
 
 homeHref = () =>{
-    location.href = "https://weather-forecastingapp.netlify.app/view/index.html";
+    location.href = ".../index.html";
 }
